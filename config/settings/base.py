@@ -102,15 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-SOCIALACCOUNT_PROVIDERS = {
-    'github': {
-        'APP': {
-            'client_id': os.getenv('SOCIALACCOUNT_GITHUB_CLIENT_ID', ''),
-            'secret': os.getenv('SOCIALACCOUNT_GITHUB_CLIENT_SECRET', ''),
-        },
-        'CALLBACK_URL': os.getenv('SOCIALACCOUNT_GITHUB_CALLBACK_URL', ''),
-    }
-}
 AUTH_USER_MODEL = 'users.User'
 
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
@@ -144,4 +135,14 @@ SPECTACULAR_SETTINGS = {
     'TITLE': 'thenewboston website API',
     'DESCRIPTION': 'API for thenewboston.com site',
     'VERSION': '0.0.1',
+}
+
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'APP': {
+            'client_id': os.getenv('SOCIALACCOUNT_GITHUB_CLIENT_ID', ''),
+            'secret': os.getenv('SOCIALACCOUNT_GITHUB_CLIENT_SECRET', ''),
+        },
+        'CALLBACK_URL': os.getenv('SOCIALACCOUNT_GITHUB_CALLBACK_URL', ''),
+    }
 }
